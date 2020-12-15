@@ -20,6 +20,15 @@ class App extends React.Component {
     });
   };
 
+  removeHandler = (id) => {
+    let newArray = [...this.state.studentArray];
+    let clickedStudent = newArray.find((student) => student.id === id);
+    clickedStudent.quidditch = false;
+    this.setState({
+      studentArray: newArray,
+    });
+  };
+
   quidditchTeam = () => {
    return this.state.studentArray.filter((student) => student.quidditch === true);
   
@@ -34,7 +43,9 @@ class App extends React.Component {
           students={this.state.studentArray}
           clickHandler={this.clickHandler}
         />
-        <Quidditch students={this.state.studentArray} quidditchTeam={this.quidditchTeam()}/>
+        <Quidditch students={this.state.studentArray} 
+        quidditchTeam={this.quidditchTeam()}
+        removeHandler={this.removeHandler}/>
       </div>
     );
   }
