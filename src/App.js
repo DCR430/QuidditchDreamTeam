@@ -45,7 +45,7 @@ class App extends React.Component {
         />
         <Quidditch students={this.state.studentArray} 
         quidditchTeam={this.quidditchTeam()}
-        removeHandler={this.removeHandler}/>
+        clickHandler={this.removeHandler}/>
       </div>
     );
   }

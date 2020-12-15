@@ -1,19 +1,19 @@
 import React from "react";
 
-function StudentCard({ studentObj, clickHandler,removeHandler }) {
+function StudentCard({ studentObj, clickHandler }) {
   let studentClick = () => {
     return clickHandler(studentObj.id);
   };
 
-  let studentClicks = () => {
-    return removeHandler(studentObj.id);
-  };
+//   let studentClicks = () => {
+//     return removeHandler(studentObj.id);
+//   };
   
   console.log(studentObj);
 
   return (
     <div class="student">
-      <h2 onClick={studentClicks}>{studentObj.name}</h2>
+      <h2>{studentObj.name}</h2>
       <img class="img" src={studentObj.img} onClick={studentClick} />
     </div>
   );

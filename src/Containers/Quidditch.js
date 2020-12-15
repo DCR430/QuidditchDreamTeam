@@ -2,7 +2,7 @@ import React from 'react'
 import StudentCard from '../Components/StudentCard'
 
 function Quidditch(props){
-     let quidditchTeam = props.quidditchTeam.map(studentObj => <StudentCard key={studentObj.id} studentObj={studentObj} removeHandler={props.removeHandler}/>)
+     let quidditchTeam = props.quidditchTeam.map(studentObj => <StudentCard key={studentObj.id} studentObj={studentObj} clickHandler={props.clickHandler}/>)
     console.log("QPROPS",props.clickHandler)
     return(
         <>
