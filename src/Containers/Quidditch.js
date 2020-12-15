@@ -1,8 +1,16 @@
 import React from 'react'
+import StudentCard from '../Components/StudentCard'
 
-function Quidditch(){
+function Quidditch(props){
+     let quidditchTeam = props.quidditchTeam.map(studentObj => <StudentCard key={studentObj.id} studentObj={studentObj}/>)
+    console.log("QPROPS",props.quidditchTeam.name)
     return(
-        <h2>Quidditch Team</h2>
+        <>
+        <h1>Quidditch All Stars</h1>
+        {quidditchTeam}
+        </>
+        
+        
     )
 }
 

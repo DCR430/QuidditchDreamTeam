@@ -10,23 +10,29 @@ class App extends React.Component {
     studentArray: studentArray,
   };
 
-  clickHandler =(id)=> {
-    let newArray = [...this.state.studentArray]
-    let clickedStudent = newArray.find(student => student.id === id)
-    clickedStudent.quidditch = true
+  clickHandler = (id) => {
+    let newArray = [...this.state.studentArray];
+    let clickedStudent = newArray.find((student) => student.id === id);
+    clickedStudent.quidditch = true;
     this.setState({
-      studentArray:newArray
-    })
-    
+      studentArray: newArray,
+    });
+  };
+
+  quidditchTeam = () => {
+   return this.state.studentArray.filter((student) => student.quidditch === true);
   
-  }
-  
-  
+  };
+
   render() {
+    console.log("CONSOLE",this.quidditchTeam())
     return (
       <div>
-        <StudentsContainer students={this.state.studentArray} />
-        <Quidditch students={this.state.studentArray} />
+        <StudentsContainer
+          students={this.state.studentArray}
+          clickHandler={this.clickHandler}
+        />
+        <Quidditch students={this.state.studentArray} quidditchTeam={this.quidditchTeam()}/>
       </div>
     );
   }

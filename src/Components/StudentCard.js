@@ -1,12 +1,18 @@
 import React from 'react'
 
-function StudentCard({studentObj}){
+function StudentCard({studentObj,clickHandler}){
   
+  let studentClick = () =>{
+        return clickHandler(studentObj.id)
+
+    }
+    console.log(studentObj)
+
     return(
-        <>
-      <p>{studentObj.name}</p>
-      <img src={studentObj.img}/>
-      </>  
+    <>
+      <h2>{studentObj.name}</h2>
+      <img src={studentObj.img} onClick={studentClick}/>
+    </>  
     )
 }
 
