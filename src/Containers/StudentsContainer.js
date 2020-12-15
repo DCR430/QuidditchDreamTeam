@@ -5,7 +5,7 @@ function StudentsContainer({students,clickHandler}) {
   let student = students.map(studentObj => <StudentCard key={studentObj.id} studentObj={studentObj} clickHandler={clickHandler}/>)
   return(
       <>
-      <h2> Hogwart's Finest!💫  </h2>
+      <h1 class= "App"> 🧹 Hogwart's Quiddich Player Selection 💫  </h1>
       {student}
       </>
 

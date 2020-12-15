@@ -11,7 +11,7 @@ function StudentCard({studentObj,clickHandler}){
     return(
     <>
       <h2>{studentObj.name}</h2>
-      <img src={studentObj.img} onClick={studentClick}/>
+      <img class = "img" src={studentObj.img} onClick={studentClick}/>
     </>  
     )
 }
