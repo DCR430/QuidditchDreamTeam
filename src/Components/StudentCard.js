@@ -9,10 +9,10 @@ function StudentCard({studentObj,clickHandler}){
     console.log(studentObj)
 
     return(
-    <>
+    <div class = "student">
       <h2>{studentObj.name}</h2>
       <img class = "img" src={studentObj.img} onClick={studentClick}/>
-    </>  
+    </div>  
     )
 }
 

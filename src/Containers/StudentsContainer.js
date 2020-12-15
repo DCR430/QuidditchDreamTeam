@@ -6,6 +6,7 @@ function StudentsContainer({students,clickHandler}) {
   return(
       <>
       <h1 class= "App"> 🧹 Hogwart's Quiddich Player Selection 💫  </h1>
+      <h1>Student's</h1>
       {student}
       </>
 

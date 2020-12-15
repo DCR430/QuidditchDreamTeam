@@ -6,7 +6,7 @@ function Quidditch(props){
     console.log("QPROPS",props.quidditchTeam.name)
     return(
         <>
-        <h1>Quidditch All Stars</h1>
+        <h1 class = "allstar">Quidditch All Stars</h1>
         {quidditchTeam}
         </>
         

@@ -2,6 +2,22 @@
   text-align: center;
 }
 
+.student{
+  display: inline-flexbox;
+  flex-direction: column;
+}
+/* 
+.allstar{
+  float: right;
+  height: 100px;
+} */
+
+.background{
+  background-image: "https://i.pinimg.com/originals/48/c6/13/48c6137d9d1c1d80e137326cf71e4667.png";
+}
+
+
+
 .img{
   width: 350px;
   height: auto;
