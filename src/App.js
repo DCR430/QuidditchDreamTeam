@@ -4,6 +4,7 @@ import React from "react";
 import StudentsContainer from "./Containers/StudentsContainer.js";
 import Quidditch from "./Containers/Quidditch.js";
 import studentArray from "./api.js";
+import Header from "./Components/Header.js";
 
 class App extends React.Component {
   state = {
@@ -28,6 +29,7 @@ class App extends React.Component {
     console.log("CONSOLE",this.quidditchTeam())
     return (
       <div>
+        <Header/>
         <StudentsContainer
           students={this.state.studentArray}
           clickHandler={this.clickHandler}
