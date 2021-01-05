@@ -11,6 +11,12 @@ export default class Form extends Component {
             [e.target.name]:e.target.value
         })
     }
+
+    submit=(e)=>{
+        e.preventDefault()
+        console.log("FORM",this.state)
+
+    }
     
     render() {
         return (
@@ -21,11 +27,14 @@ export default class Form extends Component {
                 placeholder="student name" 
                 value={this.state.name} 
                 onChange={e => this.onChange(e)} />
+                <br></br>
                 
-                Gif  <input name="gif" 
+                 Gif  <input name="gif" 
                 placeholder="student Gif "
                 value={this.state.gif} 
                 onChange={e => this.onChange(e)} />
+                <br></br>
+                <button onClick={e => this.submit(e) }>Add Student</button>
              </form>
         </div>
         )
