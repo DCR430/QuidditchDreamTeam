@@ -5,6 +5,7 @@ import StudentsContainer from "./Containers/StudentsContainer.js";
 import Quidditch from "./Containers/Quidditch.js";
 import studentArray from "./api.js";
 import Header from "./Components/Header.js";
+import Form from "./Containers/Form";
 
 class App extends React.Component {
   state = {
@@ -39,6 +40,7 @@ class App extends React.Component {
     return (
       <div>
         <Header/>
+        <Form/>
         <StudentsContainer
           students={this.state.studentArray}
           clickHandler={this.clickHandler}
