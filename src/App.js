@@ -40,7 +40,7 @@ class App extends React.Component {
     return (
       <div>
         <Header/>
-        <Form/>
+       
         <StudentsContainer
           students={this.state.studentArray}
           clickHandler={this.clickHandler}
