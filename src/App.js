@@ -35,6 +35,13 @@ class App extends React.Component {
   
   };
 
+
+  onChange=(e)=>{
+    this.setState({
+        [e.target.name]:e.target.value
+    })
+}
+
   render() {
     console.log("CONSOLE",this.quidditchTeam())
     return (
@@ -44,6 +51,7 @@ class App extends React.Component {
         <StudentsContainer
           students={this.state.studentArray}
           clickHandler={this.clickHandler}
+          onChange={this.onChange}
         />
         <Quidditch students={this.state.studentArray} 
         quidditchTeam={this.quidditchTeam()}

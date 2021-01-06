@@ -22,7 +22,11 @@ export default class Form extends Component {
         return (
         <div>
             <h2>Add a Student</h2>
-            <form>
+            <form submit={(e)=>{
+                    e.preventDefault()
+                   this.props.onChange({[e.target.name]:e.target.value})
+
+            }}>
                 Name <input name="name"
                 placeholder="student name" 
                 value={this.state.name} 
