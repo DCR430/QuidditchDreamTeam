@@ -1,17 +1,19 @@
-import React from "react";
+
 import StudentCard from '../Components/StudentCard.js'
 import Form from "./Form.js";
+import React, { Component } from 'react'
 
-function StudentsContainer({students,clickHandler}) {
-  let student = students.map(studentObj => <StudentCard key={studentObj.id} studentObj={studentObj} clickHandler={clickHandler}/>)
-  return(
-      <>
-      <h1>Student's</h1>
-      <Form/>
-      {student}
-      </>
-
-  )
+export default class StudentsContainer extends Component {
+  render() {
+    let student = this.props.students.map(studentObj => <StudentCard key={studentObj.id} studentObj={studentObj} clickHandler={this.props.clickHandler}/>)
+    return (
+      <div>
+        <h1>Student's</h1>
+             <Form/>
+            {student}
+    </div>
+    )
+  }
 }
 
-export default StudentsContainer;
+
